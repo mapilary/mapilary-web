@@ -1,0 +1,28 @@
+{
+  "name": "mapilary-web",
+  "version": "0.1",
+  "authors": [
+    "Marian Hello <marian.hello@mapilary.com>"
+  ],
+  "description": "Mapilary Web",
+  "keywords": [
+    "last",
+    "mile",
+    "logistics",
+    "tracking"
+  ],
+  "license": "MAPILARY",
+  "homepage": "mapilary.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "leaflet": "~0.6.4",
+    "leaflet-locatecontrol": "domoritz/leaflet-locatecontrol#~0.19.0"
+  }
+}
