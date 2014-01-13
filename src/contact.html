@@ -56,6 +56,8 @@ var mapProp = {
   };
 var map=new google.maps.Map(document.getElementById("googleMap")
   ,mapProp);
+var map=new google.maps.Map(document.getElementById("aboutMap")
+  ,mapProp);
 
 marker=new google.maps.Marker({
   position:myCenter,
@@ -88,7 +90,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       				</div>
       				<button type="submit" class="btn-widget btn-default">Track</button>
     			</form>
-                <div id="googleMap" style="width:100%;height:400px;"></div>
+                <div id="googleMap" class="googleMap" style="width:100%;height:400px;"></div>
          	</div>
         	<div class="cbp-af-header">
 				<div class="cbp-af-inner">
@@ -173,7 +175,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
          		</div><!-- /.contact2-3 -->
       		</div><!-- /.container -->
    		</div><!-- /.contact -->
-		<div id="googleMap" style="width:100%;height:400px;"></div>
+		<div id="aboutMap" class="googleMap" style="width:100%;height:400px;"></div>
     </div><!-- /#content -->
 
 
