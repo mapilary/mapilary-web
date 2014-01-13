@@ -1,0 +1,840 @@
+/*!
+ * Copyright 2013 Mapilary s.r.o.
+ *
+ * Author - Marian Kadlec - http://mariankadlec.com - marian.kadlec@icloud.com
+ * 
+ */
+ 
+ /*
+ * Table of contents:
+ *
+ * @media (max-width: 1360px)
+ * @media (min-width: 1160px)
+ * @media (max-width: 1160px)
+ * @media (min-width: 1000px)
+ * @media (max-width: 1000px)
+ * @media (max-device-width: 1024px)
+ * @media (max-width: 768px)
+ * @media (max-width: 600px)
+ * @media (max-device-width: 440px)
+ * @media (max-width: 440px)
+ * @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)
+ * 
+ */
+ 
+@media (max-width: 1360px) { 
+.slide1-text {
+	top:30px !important;
+}
+
+.slide1-small-text {
+	top:130px !important;
+}
+}
+ 
+@media (min-width: 1160px) { 
+
+ #content .precontainer {
+	width: 100%;
+	position: relative;
+	min-height: 697px;
+	background: #f6f5f2;
+	z-index: -2;
+}
+
+#content .precontainer2 {
+	width: 100%;
+	position: relative;
+	min-height: 760px;
+	top: 80px;
+}
+
+.container-left {
+	width: 50%;
+	background-color: #eb6355;
+}
+
+.container-right {
+	width: 50%;
+	background-color: #83796a;
+}
+}
+
+
+@media (max-width: 1160px) {
+	 
+.logo {
+	margin-top: 39px;
+	height: 100px;
+	margin-left: 20px;
+}
+ 
+header .container {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+ 
+.cbp-af-header-shrink .logo {
+	margin-top: 20px;
+}
+
+.cbp-af-header-shrink .form-inline {
+	margin-top: 23px;
+}
+
+.cbp-af-header-shrink nav ul {
+	margin: 58px 0 0 0;
+	left: 56px;
+}
+
+.cbp-af-header-shrink .form-control {
+	padding: 8px 14px;
+}
+
+.cbp-af-header-shrink .btn {
+	padding: 8px 32px
+}
+
+nav ul {
+	margin: 120px 0 0 0;
+	left: 118px;
+}
+
+nav ul li {
+	margin-left: 16px;
+	font-size: 18px;
+	letter-spacing: -1px;
+}
+ 
+ .form-control {
+	padding: 18px 18px;
+	font-size: 26px;
+	width: 215px;
+}
+
+.btn {
+	padding: 18px 28px;
+	font-size: 26px;
+	margin-right: 20px;
+}
+	
+.form-inline {
+	margin-top: 67px;
+	width: 400px;
+}
+
+/*.incontainer-left, .incontainer-right {
+	min-height: 810px;
+}*/
+
+.benefits .incontainer-right, .benefits .incontainer-left {
+	min-height: 0;
+}
+
+.right-footer {
+	position: absolute;
+	right: 20px;
+}
+
+.left-footer {
+	margin-left: 20px;
+}
+
+.story p, .story h2, .partners h2, .mission p, .mission h3, .vision p, .vision h3, .values p, .values h3 {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.slide1-text {
+	top:30px !important;
+}
+
+.slider h2 {
+	font-size: 60px !important;
+}
+
+.slider h3 {
+	font-size: 30px;
+}
+
+.slide1-small-text {
+	top:130px !important;
+}
+
+.title h2 {
+	font-size: 34px;
+}
+
+.features .container p {
+	font-size: 14px;
+	line-height: 24px;
+}
+}
+
+
+@media (min-width: 1000px) { 
+
+.navbar-toggle {
+	display: none;
+}
+
+nav ul li {
+	float:left;
+}
+}
+
+
+@media (max-width: 1000px) { 
+
+.cbp-af-header-shrink .logo {
+	margin-top: 20px;
+}
+
+.cbp-af-header-shrink .form-inline {
+	margin-top: 22px;
+}
+
+.cbp-af-header-shrink nav ul {
+	margin: 32px 20px 0 0;
+}
+
+h1 a {
+	width: 293px;
+	margin-top: 37px;
+	background-size: 100%;
+}
+
+.cbp-af-header-shrink h1 a {
+	margin-top: 18px;
+}
+
+.form-inline {
+	margin-top: 61px;
+}
+
+.navbar-toggle {
+	position: relative;
+	float: right;
+	padding: 9px 10px;
+	margin-top: 81px;
+	background-color: #eb6355;
+	border: none;
+	z-index: 2;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #fff;
+	right: 9px;
+}
+
+.cbp-af-header-shrink .navbar-toggle {
+	right: 9px;
+	margin-top: 31px;
+}
+
+.navbar-collapse {
+	position: absolute;
+	z-index: 0;
+	right: 0;
+	left: 0;
+	display: block;
+
+}
+
+.navbar-header .collapse {
+	display: none;
+}
+
+.navbar-collapse.in {
+	overflow-y: visible;
+}
+
+.navbar {
+	min-height: 50px;
+}
+
+.collapse {
+	display: none;
+}
+
+nav ul {
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding-top: 20px;
+	left: 0;
+	position: static;
+	background-color: #fff;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+	max-height: 340px;
+}
+
+.cbp-af-header-shrink nav ul {
+	margin: 0;
+	left: 0;
+}
+
+nav ul li {
+	margin: 0 0 20px 0;
+	font-size: 18px;
+	letter-spacing: 0;
+}
+
+.logo { 
+	margin-top: 35px;
+}
+
+.benefits .incontainer-left li, .benefits .incontainer-right li {
+	/*padding: 0 0 0 45px;
+	min-height: 60px;
+	margin-bottom: 10px;
+	font-size: 26px;*/
+}
+
+.icon-map-position, .icon-clock, .icon-time, .icon-sipky, .icon-neighbour, .icon-notification, .icon-list, .icon-check, .icon-smile, .icon-graph, .icon-map {
+	/*background-size: 50% 50%;
+	background-repeat: no-repeat;*/
+}
+
+.icon-map-position, .icon-clock {
+	top: 7px;
+}
+
+.icon-sipky, .icon-neighbour, .icon-notification, .icon-check, .icon-smile, .icon-graph, .icon-map {
+	top: 12px;
+}
+
+.mission h3, .vision h3, .values h3 {
+	padding-top: 10%;
+	margin-bottom: 5%;
+}
+
+.mission p, .vision p, .values p {
+	font-size: 18px;
+}
+
+.slide1-text {
+	top:15px !important;
+}
+
+.slider h2 {
+	font-size: 50px !important;
+}
+
+.slider h3 {
+	font-size: 22px;
+}
+
+.slide1-small-text {
+	top:100px !important;
+}
+
+.title h2 {
+	font-size: 24px;
+	font-weight: 700;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.features .container-left, .features .container-right {
+	width: 100%;
+}
+
+.features img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.features h3 {
+	text-align: center !important;
+	padding-top: 50px !important;
+	padding-bottom: 20px !important; 
+}  
+
+.features p {
+	margin-bottom: 40px;
+}
+
+.navbar-header h2 {
+	margin-top: 112px;
+	left: 110px;
+	position: absolute;
+}
+
+.cbp-af-header-shrink .navbar-header h2  {
+	margin-top: 57px;
+	left: 86px;
+	position: absolute;
+}
+
+.incontainer h4 {
+	font-size: 24px;
+}
+
+li {
+	font-size: 18px;
+} 
+}
+
+
+@media (max-device-width: 1024px) { 
+
+.form-control {
+	min-width: 116px;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+}
+
+.form-control-widget {
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+}
+}
+
+
+@media (max-width: 768px) {
+
+.cbp-af-header-shrink .logo {
+	display: none;
+}
+
+h1 a {
+	width: 210px;
+	background-size: 100%;
+	margin-top: 0;
+	height: 75px;
+	position: absolute;
+	top: -48px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cbp-af-header-shrink h1 a {
+	display: none;
+}
+
+.cbp-af-header-shrink nav ul {
+	margin: 32px 20px 0 0;
+}
+
+.logo { 
+	margin-top: 0;
+	height: 75px;
+	position: absolute;
+	top: -50px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.form-inline {
+	top: 37px;
+	width: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	float: none;
+}
+
+.cbp-af-header-shrink .form-inline {
+	margin-top: 0;
+	top: 22px;
+}
+
+.form-control {
+	width: 160px;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	padding: 15px 14px;
+	font-size: 20px;
+}
+
+.btn {
+	padding: 15px 28px;
+	font-size: 20px;
+	margin-right: 0;
+}
+
+.navbar-toggle {
+	margin-top: 49px;
+}
+
+.cbp-af-header-shrink .navbar-toggle {
+	margin-top: 26px;
+}
+
+.navbar-collapse.in {
+	z-index: 1;
+	top: -61px;
+}
+
+.cbp-af-header-shrink .navbar-collapse.in {
+	top: -32px;
+}
+
+.incontainer-left, .incontainer-right, .benefits .incontainer-right, .benefits .incontainer-left {
+	width: 100%;
+}
+
+.benefits .incontainer-right, .benefits .incontainer-left {
+	max-height: 780px;
+	min-height: initial;
+}
+
+.incontainer ul {
+	max-width: 90%;
+}
+
+.benefits .incontainer-left li, .benefits .incontainer-right li {
+	/*padding: 0 0 0 45px;*/
+	min-height: 80px;
+	margin-bottom: 30px;
+	/*font-size: 26px;
+}
+
+.icon-map-position, .icon-clock, .icon-time, .icon-sipky, .icon-neighbour, .icon-notification, .icon-list, .icon-check, .icon-smile, .icon-graph, .icon-map {
+	background-size: 50% 50%;
+	background-repeat: no-repeat;*/
+}
+
+.icon-map-position, .icon-clock {
+	top: 7px;
+}
+
+.icon-sipky, .icon-neighbour, .icon-notification, .icon-check, .icon-smile, .icon-graph, .icon-map {
+	top: 5px;
+}
+
+.benefits h2, .story h2, .partners h2 {
+	font-size:60px;
+}
+
+.story p, .help p {
+	font-size: 16px;
+	margin-bottom: 50px;
+}
+
+.column1-3 p {
+	font-size: 18px;
+	line-height: 20px;
+	margin-bottom: initial;
+}
+
+.column1-4 .img-responsive {
+	width: 90%;
+}
+
+.contact1-3, .contact2-3 {
+	width: 100%;
+	padding-bottom: 0;
+}
+
+.contact2-3 {
+	width: 100%;
+	padding-bottom: 80px;
+}
+
+footer .form-horizontal {
+	max-width: 400px;
+}
+
+footer .form-control {
+	display: block;
+	padding: 12px 14px;
+	font-size: 14px;
+	background-color: #f6f5f2;
+	border: none;
+	margin: 0 0 30px 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+footer h2 {
+	font-size: 30px;
+	padding: 20px 20px 20px 20px;
+}
+
+footer .btn {
+	font-size: 20px;
+}
+
+.column1-4 {
+	width: 50%;
+}
+
+.column1-4 .img-responsive {
+	width: 80%;
+}
+
+.column1-3 {
+	width: 100%;
+	min-height: initial;
+	padding-bottom: 50px;
+}
+
+.column1-5 {
+	width: 100%;
+	padding-bottom: 50px;
+}
+
+.plus {
+	padding-top: 25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.column1-3-career {
+	width: 100%;
+}
+
+.column1-3 .icon {
+	margin-top: 0;
+}
+
+.column1-3 .img.responsive {
+	width: 50%;
+}
+
+.left-footer, .center-footer, .right-footer {
+	text-align: center;
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	left: 0;
+	right: 0;
+	float: none;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.mission-left, .mission-right, .vision-left, .vision-right, .values-left, .values-right {
+	width: 100%;
+}
+
+.mission h3, .vision h3, .values h3 {
+padding-top: 3%;
+margin-bottom: 5%;
+text-align: center;
+}
+
+.mission-right, .values-right {
+	padding-bottom: 80px;
+}
+
+.benefits .incontainer-left li, .benefits .incontainer-right li, .benefits .incontainer-right p {
+	padding-left: 70px;
+}
+
+.slide1-image {
+	top:39% !important;
+}
+
+.slide1-text {
+	top:15px !important;
+}
+
+.slider h2 {
+	font-size: 40px !important;
+}
+
+.slider h3 {
+	font-size: 18px;
+}
+
+.slide1-small-text {
+	top:80px !important;
+}
+
+.title h2 {
+	font-size: 22px;
+	font-weight: 700;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.navbar-header h2 {
+	margin-top: 4px;
+	left: 41px;
+	position: absolute;
+	font-size: 20px;
+	right: 0;
+}
+
+.cbp-af-header-shrink .navbar-header h2  {
+	display: none;
+}
+}
+
+@media (max-width: 600px) {
+.slide1-image {
+	display: none;
+}
+}
+
+@media (max-device-width: 440px) { 
+
+.form-control {
+	width: 63px;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	padding: 10px 9px;
+	font-size: 16px;
+}
+
+}
+
+@media (max-width: 440px) {
+	
+.btn-widget {
+	padding: 18px 30px;
+}
+	
+.logo {
+	margin-top: 15px;
+	height: 50px;
+}
+
+.form-control {
+	width: 63px;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	padding: 10px 9px;
+	font-size: 16px;
+}
+
+.cbp-af-header-shrink .form-control {
+	padding: 10px 9px;
+	font-size: 16px;
+}
+
+.btn {
+	padding: 10px 7px;
+	font-size: 16px;
+	margin-right: 15px
+}
+
+.cbp-af-header-shrink .btn {
+	padding: 10px 7px;
+	font-size: 16px;
+}
+
+.navbar-toggle {
+	margin-top: 42px;
+}
+
+.cbp-af-header-shrink .navbar-toggle {
+	margin-top: 26px
+}
+
+.form-inline {
+	top: 38px;
+	width: 220px;
+}
+
+.column1-4 {
+	width: 100%;
+}
+
+.column1-4 .img-responsive {
+	width: 70%;
+}
+
+.benefits h2, .story h2, .partners h2, .features h2 {
+	font-size: 50px;
+}
+
+footer .form-horizontal {
+	max-width: 300px;
+}
+
+footer .form-control {
+	display: block;
+	padding: 12px 14px;
+	font-size: 14px;
+	background-color: #f6f5f2;
+	border: none;
+	margin: 0 0 30px 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.incontainer ul {
+	max-width: 80%;
+}
+
+.incontainer h3 {
+	font-size: 30px;
+}
+
+.incontainer p, .incontainer li, .benefits .incontainer-left li, .benefits .incontainer-right li, .under-li {
+	font-size: 14px !important;
+}
+
+.incontainer-left, .incontainer-right {
+	min-height: 500px;
+}
+
+.mission-right {
+	padding-bottom: 40px;
+}
+
+.icon-map-position, .icon-clock, .icon-time, .icon-sipky, .icon-neighbour, .icon-notification, .icon-list, .icon-check, .icon-smile, .icon-graph, .icon-map {
+	background-size: 80%;
+}
+
+.slider {
+	display: none;
+}
+
+.incontainer h4 {
+	left: 0;
+}
+}
+
+
+/*Retina graphics!*/
+@media (-webkit-min-device-pixel-ratio: 1.5), (-moz-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5){
+
+.social img {
+	width: 32px !important;
+	margin: 10px;
+}
+
+.social {
+	width: 110px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: -10px;
+} 
+
+.incontainer-left .icon, .incontainer-right .icon {
+	width: 124px !important;
+	margin-top: 40px;
+}
+
+.linka, .linka2 {
+	width: 144px;}
+	
+.column1-4 .img-responsive {
+	width: 50%;
+}
+	   
+.incontainer-left, .incontainer-right {
+	min-height: 400px;
+}
+}

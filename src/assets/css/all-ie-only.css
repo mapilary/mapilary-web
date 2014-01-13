@@ -1,0 +1,84 @@
+/*!
+ * Copyright 2013 Mapilary s.r.o.
+ *
+ * Author - Marian Kadlec - http://mariankadlec.com - marian.kadlec@icloud.com
+ * 
+ */
+ 
+ 
+ /* ===== Stylesheet for IE only  ===== */
+ 
+.cbp-af-header {
+	background: #fff;
+}
+
+nav ul {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 118px 0 0 0;
+	position: absolute;
+	left: 104px;
+	width: 400px;
+}
+
+nav ul li {
+	margin-left: 20px;
+	font-family: 'Open Sans Condensed';
+  	font-style: normal;
+  	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 18px;
+	letter-spacing: -1px;
+	width: auto;
+	float: left;
+	display: inline-block;
+}
+
+.navbar-header .form-inline {
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 53px;
+	-webkit-appearance: none;
+	display: block;
+	float: right; 
+}
+
+.navbar-header .form-control {
+	width: 200px !important;
+	padding: 11px 15px;
+	font-size: 20px;
+}
+
+.navbar-header .btn {
+	padding: 11px 15px;
+	font-size: 20px;
+}
+
+.navbar-toggle {
+	display: none;
+}
+
+.social {
+	width: 225px;
+}
+
+a {
+	color: transparent;
+}
+
+.icon-clock, .icon-sipky, .icon-smile, .icon-map {
+	width: 60px;
+	height: 60px;
+}
+
+.icon-map-position {
+	width: 60px;
+	height: 72px;
+}
+
+.icon-list {
+	width: 60px;
+	height: 82px;
+}

@@ -39,8 +39,8 @@
             opacity: 1,
             fillOpacity: 1
           }).addTo(map);
-          socket = io.connect('https://mapilary.com', {
-            resource: '/ws/socket.io',
+          socket = io.connect('https://ws.mapilary.com', {
+            resource: 'socket.io',
             query: 'apikey=1234'
           });
           socket.on('connect', function() {

@@ -1,0 +1,56 @@
+/*!
+ * Copyright 2013 Mapilary s.r.o.
+ *
+ * Author - Marian Kadlec - http://mariankadlec.com - marian.kadlec@icloud.com
+ * 
+ */
+ 
+ 
+ /* ===== Stylesheet for IE7 only  ===== */
+ 
+ .precontainer .container-left, .precontainer .container-right {
+	display: none;
+}
+
+.incontainer-left, .incontainer-right {
+	min-height: 750px;
+}
+
+.incontainer-left, .incontainer-right, .benefits .incontainer-left, .benefits .incontainer-right, .features .container-left, .features .container-right, .mission-left, .mission-right, .vision-left, .vision-right, .mission-left, .mission-right, .values-left, .values-right  {
+	width: 49.9%;
+}
+
+.precontainer {
+	background-color: #f6f5f2;
+}
+
+footer h2 {
+	padding-top: 30px;
+}
+
+.column1-3-career {
+	float: left;
+	width: 33.3%;
+}
+
+.logo {
+	color: transparent;
+	border: none;
+}
+
+.column1-5 {
+	width: 4.9%;
+}
+
+.features .container-left p, .features .container-right p {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.features .container h3 {
+	padding-top: 30px; 
+}
+
+.features .container {
+	border-bottom: 1px solid #eeeeee;
+}
