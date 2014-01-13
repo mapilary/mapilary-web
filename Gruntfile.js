@@ -34,7 +34,9 @@ module.exports = function(grunt) {
                         'css/**',
                         'js/**',
                         'ico/**',
-                        '*.html'
+                        '*.html',
+                        'robots.txt',
+                        'sitemap.xml'
                     ],
                     filter: 'isFile'
                 }]
