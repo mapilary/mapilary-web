@@ -30,6 +30,7 @@ module.exports = function(grunt) {
                     cwd: 'src/',
                     dest: 'dist/',
                     src: [
+                        'assets/**',
                         'css/**',
                         'js/**',
                         'ico/**',
