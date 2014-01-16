@@ -2,17 +2,22 @@ $ = jQuery
 
 $ =>
     map = null
+    featureGroup = null
     # document ready code in here
-    $('button:submit').on 'click', (ev)->
+    $('button:submit.btn-track').on 'click', (ev)->
         ev.preventDefault()
         $('#map').show 'slow', ()->
             if !map
                 map = L.map('map').setView([51.505, -0.09], 13)
+                featureGroup = L.featureGroup();
                 L.tileLayer('https://ssl_tiles.cloudmade.com/dfc00e1faff14a268dbebec543abfc29/997/256/{z}/{x}/{y}.png', {
                     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
                     maxZoom: 18
                 }).addTo(map)
                 L.control.locate().addTo(map)
+                featureGroup.addTo(map)
+            else
+                featureGroup.clearLayers();
             trackingNr = ($ ev.target.form[0]).val()
             params = {
                 trackingNr: trackingNr,
@@ -32,7 +37,8 @@ $ =>
                         weight: 2,
                         opacity: 1,
                         fillOpacity: 1,
-                    }).addTo(map)
+                    })
+                    featureGroup.addLayer(circle);
                     socket = io.connect('https://ws.mapilary.com', {resource: 'socket.io', query: 'apikey=1234'})
                     socket.on 'connect', ->
                         socket.emit 'subscribe', 'trackingNr:' + trackingNr
@@ -47,8 +53,10 @@ $ =>
                                 weight: 1,
                                 opacity: 1,
                                 fillOpacity: 1,
-                            }).addTo(map)
+                            })
+                            featureGroup.addLayer(driver)
                         else
                             driver.setLatLng(latlng)
+                        map.fitBounds(featureGroup);
                         return
         return
