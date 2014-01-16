@@ -12,9 +12,10 @@ module.exports = function(grunt) {
     'grunt-contrib-concat',
     'grunt-contrib-less',
     'grunt-contrib-coffee',
+    'grunt-contrib-imagemin',
+    'grunt-contrib-htmlmin',
     'grunt-usemin',
-    'grunt-targethtml',
-    'grunt-contrib-htmlmin'
+    'grunt-targethtml'
     ].forEach(function(task) { grunt.loadNpmTasks(task); });
 
 
@@ -47,7 +48,6 @@ module.exports = function(grunt) {
                     'assets/css/all-ie-only.css',
                     'assets/css/ie7.css',
                     'assets/ico/**',
-                    'assets/img/**',
                     'robots.txt',
                     'sitemap.xml'
                     ],
@@ -96,6 +96,16 @@ module.exports = function(grunt) {
                 ext: '.js'
             }
         },
+        imagemin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/assets/img',
+                    src: '{,*/}*.{png,jpg,jpeg}',
+                    dest: 'dist/assets/img'
+                }]
+            }
+        },
         useminPrepare: {
             html: ['.tmp/index.html', '.tmp/track.html'],
             options: {
@@ -106,20 +116,20 @@ module.exports = function(grunt) {
         usemin: {
             html: ['.tmp/index.html', '.tmp/track.html']
         },
-          htmlmin: {                                     // Task
-            dist: {                                      // Target
-              options: {                                 // Target options
-                removeComments: true,
-                collapseWhitespace: true
-            },
-            files: [{
-                expand: true,
-                cwd: '.tmp',
-                src: '*.html',
-                dest: 'dist'
-            }]
-        }
-    },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: '.tmp',
+                    src: '*.html',
+                    dest: 'dist'
+                }]
+            }
+        },
         // TODO - support qunit
         qunit: {
             files: ['test/**/*.html']
@@ -177,6 +187,7 @@ grunt.registerTask('change', [
     'useminPrepare',
     'concat',
     'uglify',
+    'imagemin',
     'cssmin',
     'usemin',
     'htmlmin'
