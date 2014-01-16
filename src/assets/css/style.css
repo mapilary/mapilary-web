@@ -1410,3 +1410,9 @@ footer .btn:hover, .btn:active {
 	-o-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
 }
+
+#map {
+    height: 360px;
+    margin-bottom: 5px;
+    display: none;
+}

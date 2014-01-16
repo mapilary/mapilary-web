@@ -2,17 +2,19 @@ module.exports = function(grunt) {
 
     // load tasks
     [
-        'grunt-contrib-jshint',
-        'grunt-contrib-qunit',
-        'grunt-contrib-watch',
-        'grunt-contrib-clean',
-        'grunt-contrib-copy',
-        'grunt-contrib-uglify',
-        'grunt-contrib-cssmin',
-        'grunt-contrib-concat',
-        'grunt-contrib-less',
-        'grunt-contrib-coffee',
-        'grunt-usemin'
+    'grunt-contrib-jshint',
+    'grunt-contrib-qunit',
+    'grunt-contrib-watch',
+    'grunt-contrib-clean',
+    'grunt-contrib-copy',
+    'grunt-contrib-uglify',
+    'grunt-contrib-cssmin',
+    'grunt-contrib-concat',
+    'grunt-contrib-less',
+    'grunt-contrib-coffee',
+    'grunt-usemin',
+    'grunt-targethtml',
+    'grunt-contrib-htmlmin'
     ].forEach(function(task) { grunt.loadNpmTasks(task); });
 
 
@@ -20,9 +22,21 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            dist: ['dist']
+            dist: ['.tmp', 'dist']
         },
         copy: {
+            prepareUsemin: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    cwd: 'src/',
+                    dest: '.tmp/',
+                    src: [
+                    '*.html',
+                    ],
+                    filter: 'isFile'
+                }]
+            },
             dist: {
                 files: [{
                     expand: true,
@@ -30,13 +44,25 @@ module.exports = function(grunt) {
                     cwd: 'src/',
                     dest: 'dist/',
                     src: [
-                        'assets/**',
-                        'css/**',
-                        'js/**',
-                        'ico/**',
-                        '*.html',
-                        'robots.txt',
-                        'sitemap.xml'
+                    'assets/css/all-ie-only.css',
+                    'assets/css/ie7.css',
+                    'assets/ico/**',
+                    'assets/img/**',
+                    'robots.txt',
+                    'sitemap.xml'
+                    ],
+                    filter: 'isFile'
+                }]
+            },
+            locatecontrol: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    flatten: true,
+                    cwd: 'bower_components/leaflet-locatecontrol/',
+                    dest: 'dist/assets/css/images/',
+                    src: [
+                    '**/images/*'
                     ],
                     filter: 'isFile'
                 }]
@@ -46,23 +72,23 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'src/css/main.min.css': [
-                        'src/less/style.less',
-                        'src/less/track.less'
-                ]
-            },
-            options: {
-                compress: false,
+                    'src/less/style.less',
+                    'src/less/track.less'
+                    ]
+                },
+                options: {
+                    compress: false,
                 // LESS source maps
                 // To enable, set sourceMap to true and update sourceMapRootpath based on your install
                 sourceMap: true,
                 sourceMapFilename: 'src/css/main.min.css.map',
                 sourceMapRootpath: '/mapilary-web'
             }
-          }
-        },
-        coffee: {
-            glob_to_multiple: {
-                expand: true,
+        }
+    },
+    coffee: {
+        glob_to_multiple: {
+            expand: true,
                 //flatten: true,
                 cwd: 'src/coffee',
                 src: ['**/*.coffee'],
@@ -71,14 +97,29 @@ module.exports = function(grunt) {
             }
         },
         useminPrepare: {
-            html: ['dist/track.html']
-        },
-        usemin: {
-            html: ['dist/track.html'],
+            html: ['.tmp/index.html', '.tmp/track.html'],
             options: {
-                dirs: ['dist/']
+                dest: 'dist/',
+                root: 'src'
             }
         },
+        usemin: {
+            html: ['.tmp/index.html', '.tmp/track.html']
+        },
+          htmlmin: {                                     // Task
+            dist: {                                      // Target
+              options: {                                 // Target options
+                removeComments: true,
+                collapseWhitespace: true
+            },
+            files: [{
+                expand: true,
+                cwd: '.tmp',
+                src: '*.html',
+                dest: 'dist'
+            }]
+        }
+    },
         // TODO - support qunit
         qunit: {
             files: ['test/**/*.html']
@@ -92,6 +133,16 @@ module.exports = function(grunt) {
                     console: true,
                     module: true,
                     document: true
+                }
+            }
+        },
+        targethtml: {
+            dist: {
+                files: {
+                    '.tmp/about.html': 'src/about.html',
+                    '.tmp/contact.html': 'src/contact.html',
+                    '.tmp/features.html': 'src/features.html',
+                    '.tmp/price.html': 'src/price.html'
                 }
             }
         },
@@ -118,21 +169,25 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('test', ['jshint', 'qunit']);
+grunt.registerTask('test', ['jshint', 'qunit']);
 
-    grunt.registerTask('change', [
-        'copy',
-        'useminPrepare',
-        'concat',
-        'usemin'
+grunt.registerTask('change', [
+    'copy',
+    'targethtml',
+    'useminPrepare',
+    'concat',
+    'uglify',
+    'cssmin',
+    'usemin',
+    'htmlmin'
     ]);
 
-    grunt.registerTask('default', [
-        'less',
-        'coffee',
-        'jshint',
-        'clean',
-        'change'
+grunt.registerTask('default', [
+    'clean',
+    'less',
+    'coffee',
+    'jshint',
+    'change'
         // 'uglify',
-    ]);
+        ]);
 };
