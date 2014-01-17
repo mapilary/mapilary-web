@@ -18,7 +18,7 @@ $ =>
                 featureGroup.addTo(map)
             else
                 featureGroup.clearLayers();
-            trackingNr = ($ ev.target.form[0]).val()
+            trackingNr = ($ ev.target.form[0]).val().toUpperCase();
             params = {
                 trackingNr: trackingNr,
                 apikey: '1234'

@@ -1,16 +1,17 @@
-Static Less & Coffeescript Grunt Project
+Mapilary Company Website
 ========================================
 
-A sample project that compiles less and coffeescript files as well as combining and minifying static files for release to production. This builds purely static flat files and is an easy way to make it nicer to build a static HTML page.
-
-The main grunt tasks it uses are `grunt-contrib-less`, `grunt-contrib-coffee`, and `grunt-usemin`.
-
-
-### Installation
+### How to build
 
 Install [nodejs and npm](http://nodejs.org/download/) (they come together), then [install grunt-cli](http://gruntjs.com/getting-started).
 
 Then just run `npm install` in the root directory of this project.
+
+### Client side scripts
+
+Install [bower](http://bower.io/#installing-bower).
+
+Then run `bower install` in the root directory of this project.
 
 ### Usage
 
