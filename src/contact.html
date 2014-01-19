@@ -22,8 +22,6 @@
   <![endif]-->
 
   <!-- CSS files -->
-  <link href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.4/leaflet.css" rel="stylesheet">
-
   <!--(if target dev)><!-->
   <link href="../bower_components/leaflet-locatecontrol/src/L.Control.Locate.css" rel="stylesheet">
   <link href="assets/css/tipsy.css" rel="stylesheet">
@@ -253,7 +251,11 @@
 
          google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.6.4/leaflet.js"></script>
+
+<!-- CSS files -->
+<link href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" rel="stylesheet">
+
+<script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
 <script src="//ws.mapilary.com/socket.io/socket.io.js"></script>
 <!--(if target dev)><!-->
 <script src="../bower_components/leaflet-locatecontrol/src/L.Control.Locate.js"></script>
