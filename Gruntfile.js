@@ -78,17 +78,17 @@ module.exports = function(grunt) {
                 },
                 options: {
                     compress: false,
-                // LESS source maps
-                // To enable, set sourceMap to true and update sourceMapRootpath based on your install
-                sourceMap: true,
-                sourceMapFilename: 'src/css/main.min.css.map',
-                sourceMapRootpath: '/mapilary-web'
+                    // LESS source maps
+                    // To enable, set sourceMap to true and update sourceMapRootpath based on your install
+                    sourceMap: true,
+                    sourceMapFilename: 'src/css/main.min.css.map',
+                    sourceMapRootpath: '/mapilary-web'
+                }
             }
-        }
-    },
-    coffee: {
-        glob_to_multiple: {
-            expand: true,
+        },
+        coffee: {
+            glob_to_multiple: {
+                expand: true,
                 //flatten: true,
                 cwd: 'src/coffee',
                 src: ['**/*.coffee'],
