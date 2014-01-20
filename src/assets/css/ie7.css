@@ -8,6 +8,36 @@
  
  /* ===== Stylesheet for IE7 only  ===== */
  
+header, .cbp-af-header {
+	height: 90px !important;
+}
+ 
+.logo {
+	max-height: 55px;
+	margin-top: 16px;
+}
+
+nav ul {
+	margin: 54px 0 0 0;
+	left: 42px;
+}
+
+.form-group {
+	float: left;
+}
+
+.form-inline {
+	margin-top: 25px !important;
+}
+
+.form-control {
+	padding: 8px 17px !important;
+}
+
+.btn {
+	padding: 4px 10px !important;
+}
+
  .precontainer .container-left, .precontainer .container-right {
 	display: none;
 }

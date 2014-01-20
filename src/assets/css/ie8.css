@@ -1,0 +1,36 @@
+/*!
+ * Copyright 2013 Mapilary s.r.o.
+ *
+ * Author - Marian Kadlec - http://mariankadlec.com - marian.kadlec@icloud.com
+ * 
+ */
+ 
+ 
+ /* ===== Stylesheet for IE8 only  ===== */
+ 
+ 
+header, .cbp-af-header {
+	height: 90px !important;
+}
+ 
+.logo {
+	max-height: 55px;
+	margin-top: 16px;
+}
+
+nav ul {
+	margin: 54px 0 0 0;
+	left: 42px;
+}
+
+.form-inline {
+	margin-top: 25px !important;
+}
+
+.form-control {
+	padding: 8px 17px;
+}
+
+.btn {
+	padding: 8px 52px;
+}

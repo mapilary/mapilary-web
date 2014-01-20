@@ -47,6 +47,7 @@ module.exports = function(grunt) {
                     src: [
                     'assets/css/all-ie-only.css',
                     'assets/css/ie7.css',
+                    'assets/css/ie8.css',
                     'assets/ico/**',
                     'robots.txt',
                     'sitemap.xml'
