@@ -1,7 +1,8 @@
 {
   "name": "mapilary-web",
-  "version": "0.1",
+  "version": "1.0",
   "authors": [
+    "Marian Kadlec <marian.kadlec@icloud.com>",
     "Marian Hello <marian.hello@mapilary.com>"
   ],
   "description": "Mapilary Web",
