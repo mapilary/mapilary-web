@@ -16,7 +16,7 @@ $ =>
                         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
                         maxZoom: 18
                     }).addTo(map)
-                    L.control.locate().addTo(map)
+                    # L.control.locate().addTo(map)
                     featureGroup.addTo(map)
                 else
                     featureGroup.clearLayers();
@@ -48,17 +48,15 @@ $ =>
                             coords = data.position.coords
                             latlng = new L.LatLng(coords.latitude, coords.longitude)
                             if !driver
-                                driver = new L.CircleMarker(latlng, {
-                                    radius: 8,
-                                    fillColor: "blue",
-                                    color: "#000",
-                                    weight: 1,
-                                    opacity: 1,
-                                    fillOpacity: 1,
-                                })
+                                truck = L.AwesomeMarkers.icon {
+                                    icon: 'truck',
+                                    markerColor: 'red',
+                                    prefix: 'fa'
+                                }
+                                driver = L.marker latlng, {icon: truck}
                                 featureGroup.addLayer(driver)
                             else
                                 driver.setLatLng(latlng)
-                            map.fitBounds(featureGroup);
+                            map.fitBounds(featureGroup, {padding: [50, 50]});
                             return
         return

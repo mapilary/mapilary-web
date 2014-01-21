@@ -22,6 +22,7 @@
     "tests"
   ],
   "dependencies": {
-    "leaflet-locatecontrol": "domoritz/leaflet-locatecontrol#~0.19.0"
+    "leaflet-locatecontrol": "domoritz/leaflet-locatecontrol#~0.19.0",
+    "Leaflet.awesome-markers": "lvoogdt/Leaflet.awesome-markers#~2.0.1"
   }
 }

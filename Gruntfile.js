@@ -62,9 +62,18 @@ module.exports = function(grunt) {
                     flatten: true,
                     cwd: 'bower_components/leaflet-locatecontrol/',
                     dest: 'dist/assets/css/images/',
-                    src: [
-                    '**/images/*'
-                    ],
+                    src: ['**/images/*'],
+                    filter: 'isFile'
+                }]
+            },
+            awesome: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    flatten: true,
+                    cwd: 'bower_components/Leaflet.awesome-markers/',
+                    dest: 'dist/assets/css/images/',
+                    src: ['**/images/*'],
                     filter: 'isFile'
                 }]
             }
