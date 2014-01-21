@@ -47,6 +47,7 @@ module.exports = function(grunt) {
                     src: [
                     'assets/css/all-ie-only.css',
                     'assets/css/ie7.css',
+                    'assets/css/ie8.css',
                     'assets/ico/**',
                     'robots.txt',
                     'sitemap.xml'
@@ -61,9 +62,18 @@ module.exports = function(grunt) {
                     flatten: true,
                     cwd: 'bower_components/leaflet-locatecontrol/',
                     dest: 'dist/assets/css/images/',
-                    src: [
-                    '**/images/*'
-                    ],
+                    src: ['**/images/*'],
+                    filter: 'isFile'
+                }]
+            },
+            awesome: {
+                files: [{
+                    expand: true,
+                    dot: true,
+                    flatten: true,
+                    cwd: 'bower_components/Leaflet.awesome-markers/',
+                    dest: 'dist/assets/css/images/',
+                    src: ['**/images/*'],
                     filter: 'isFile'
                 }]
             }
