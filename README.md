@@ -13,6 +13,16 @@ Install [bower](http://bower.io/#installing-bower).
 
 Then run `bower install` in the root directory of this project.
 
+### Mapilary Widget submodule
+
+Web is using [Mapilary Widget](https://github.com/mapilary/mapilary-widget), which has to be build first:
+
+    git submodule init
+
+    git submodule update
+
+Follow documentation on github, how to build widget project.
+
 ### Usage
 
 Auto-compile `.less` and `.coffee` files from the `src/less/` and `src/coffee` folders (and place the results in `src/css/` and `src/js/`).
