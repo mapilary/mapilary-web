@@ -1,0 +1,3 @@
+[submodule "mapilary-widget"]
+	path = mapilary-widget
+	url = https://github.com/mapilary/mapilary-widget

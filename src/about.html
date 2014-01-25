@@ -17,14 +17,15 @@
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   <![endif]-->
 
   <!-- CSS files -->
   <!--(if target dev)>
   <!-->
   <link href="../bower_components/leaflet-locatecontrol/src/L.Control.Locate.css" rel="stylesheet">
+  <link href="../bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css" rel="stylesheet">
   <link href="assets/css/tipsy.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/responsive.css" rel="stylesheet">
@@ -89,7 +90,7 @@
                 </ul>
               </div>
               <!-- /.collapse navbar-collapse -->
-              <form class="form-inline" role="form">
+              <form id="tracking-form" class="form-inline" role="form">
                 <div class="form-group">
                   <input type="text" id="trackingNr" name="trackingNr" class="form-control" title="for demonstration enter DEMO as Tracking Nr." placeholder="Tracking Nr."></div>
                 <button class="btn btn-default btn-track" data-toggle="collapse" data-target=".bs-widget-frame" type="submit">TRACK</button>
@@ -238,10 +239,10 @@
 <script src="//ws.mapilary.com/socket.io/socket.io.js"></script>
 <!--(if target dev)>
 <!-->
-<script src="../bower_components/leaflet-locatecontrol/src/L.Control.Locate.js"></script>
+<script src="../mapilary-widget/dist/js/main.js"></script>
 <script src="js/widget.js"></script>
 <script src="assets/js/jquery.tipsy.js"></script>
-<script src="assets/js/cbpAnimatedHeader.min.js"></script>
+<script src="assets/js/cbpAnimatedHeader.js"></script>
 <script src="assets/js/classie.js"></script>
 <!--<!(endif)-->
 <!--(if target dist)>
