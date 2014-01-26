@@ -45,6 +45,7 @@ module.exports = function(grunt) {
                     cwd: 'src/',
                     dest: 'dist/',
                     src: [
+                    'images/*',
                     'assets/css/all-ie-only.css',
                     'assets/css/ie7.css',
                     'assets/css/ie8.css',
@@ -53,10 +54,8 @@ module.exports = function(grunt) {
                     'sitemap.xml'
                     ],
                     filter: 'isFile'
-                }]
-            },
-            locatecontrol: {
-                files: [{
+                },
+                {
                     expand: true,
                     dot: true,
                     flatten: true,
@@ -64,10 +63,8 @@ module.exports = function(grunt) {
                     dest: 'dist/assets/css/images/',
                     src: ['**/images/*'],
                     filter: 'isFile'
-                }]
-            },
-            awesome: {
-                files: [{
+                },
+                {
                     expand: true,
                     dot: true,
                     flatten: true,
