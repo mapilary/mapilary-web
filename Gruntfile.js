@@ -219,11 +219,11 @@ grunt.registerTask('change', [
     'concat',
     'uglify',
     'imagemin',
-    // 'cssmin',
+    'cssmin',
     'usemin',
     'htmlmin',
-    'uncss',
-    'cssmin:minify'
+    // 'uncss',
+    // 'cssmin:minify'
     ]);
 
 grunt.registerTask('default', [
