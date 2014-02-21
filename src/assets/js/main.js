@@ -1,12 +1,19 @@
 (function() {
-  var $,
+  var $, widget,
     _this = this;
-
   $ = jQuery;
 
   $(function() {
-    var widget;
-    widget = null;
+    $('#trackingNr').tipsy({
+      fade: true,
+      gravity: 'n'
+    });
+
+    $('.navbar-toggle').click(function(ev) {
+      var data = $(ev.currentTarget).data();
+      $(data.target).toggleClass('collapse');
+    });
+
     $('#tracking-form').on('submit', function(ev) {
       var $map;
       ev.preventDefault();
@@ -29,5 +36,4 @@
       });
     });
   });
-
 }).call(this);

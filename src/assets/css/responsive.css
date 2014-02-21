@@ -2,9 +2,9 @@
  * Copyright 2013 Mapilary s.r.o.
  *
  * Author - Marian Kadlec - http://mariankadlec.com - marian.kadlec@icloud.com
- * 
+ *
  */
- 
+
  /*
  * Table of contents:
  *
@@ -19,10 +19,10 @@
  * @media (max-device-width: 440px)
  * @media (max-width: 440px)
  * @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)
- * 
+ *
  */
- 
-@media (max-width: 1360px) { 
+
+@media (max-width: 1360px) {
 .slide1-text {
 	top:30px !important;
 }
@@ -31,8 +31,8 @@
 	top:130px !important;
 }
 }
- 
-@media (min-width: 1160px) { 
+
+@media (min-width: 1160px) {
 
  #content .precontainer {
 	width: 100%;
@@ -62,18 +62,18 @@
 
 
 @media (max-width: 1160px) {
-	 
+
 .logo {
 	margin-top: 39px;
 	height: 100px;
 	margin-left: 20px;
 }
- 
+
 header .container {
 	padding-left: 20px;
 	padding-right: 20px;
 }
- 
+
 .cbp-af-header-shrink .logo {
 	margin-top: 20px;
 }
@@ -105,7 +105,7 @@ nav ul li {
 	font-size: 18px;
 	letter-spacing: -1px;
 }
- 
+
  .form-control {
 	padding: 18px 18px;
 	font-size: 26px;
@@ -117,7 +117,7 @@ nav ul li {
 	font-size: 26px;
 	margin-right: 20px;
 }
-	
+
 .form-inline {
 	margin-top: 67px;
 	width: 400px;
@@ -172,7 +172,7 @@ nav ul li {
 }
 
 
-@media (min-width: 1000px) { 
+@media (min-width: 1000px) {
 
 .navbar-toggle {
 	display: none;
@@ -184,7 +184,7 @@ nav ul li {
 }
 
 
-@media (max-width: 1000px) { 
+@media (max-width: 1000px) {
 
 .cbp-af-header-shrink .logo {
 	margin-top: 20px;
@@ -237,7 +237,6 @@ h1 a {
 	right: 0;
 	left: 0;
 	display: block;
-
 }
 
 .navbar-header .collapse {
@@ -281,7 +280,7 @@ nav ul li {
 	letter-spacing: 0;
 }
 
-.logo { 
+.logo {
 	margin-top: 35px;
 }
 
@@ -350,8 +349,8 @@ nav ul li {
 .features h3 {
 	text-align: center !important;
 	padding-top: 50px !important;
-	padding-bottom: 20px !important; 
-}  
+	padding-bottom: 20px !important;
+}
 
 .features p {
 	margin-bottom: 40px;
@@ -375,11 +374,11 @@ nav ul li {
 
 li {
 	font-size: 18px;
-} 
+}
 }
 
 
-@media (max-device-width: 1024px) { 
+@media (max-device-width: 1024px) {
 
 .form-control {
 	min-width: 116px;
@@ -423,7 +422,7 @@ h1 a {
 	margin: 32px 20px 0 0;
 }
 
-.logo { 
+.logo {
 	margin-top: 0;
 	height: 75px;
 	position: absolute;
@@ -683,7 +682,7 @@ text-align: center;
 }
 }
 
-@media (max-device-width: 440px) { 
+@media (max-device-width: 440px) {
 
 .form-control {
 	width: 63px;
@@ -697,11 +696,11 @@ text-align: center;
 }
 
 @media (max-width: 440px) {
-	
+
 .btn-widget {
 	padding: 18px 30px;
 }
-	
+
 .logo {
 	margin-top: 15px;
 	height: 50px;
@@ -820,7 +819,7 @@ footer .form-control {
 	margin-right: auto;
 	position: relative;
 	top: -10px;
-} 
+}
 
 .incontainer-left .icon, .incontainer-right .icon {
 	width: 124px !important;
@@ -829,11 +828,11 @@ footer .form-control {
 
 .linka, .linka2 {
 	width: 144px;}
-	
+
 .column1-4 .img-responsive {
 	width: 50%;
 }
-	   
+
 .incontainer-left, .incontainer-right {
 	min-height: 400px;
 }

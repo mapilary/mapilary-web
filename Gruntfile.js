@@ -15,7 +15,8 @@ module.exports = function(grunt) {
     'grunt-contrib-imagemin',
     'grunt-contrib-htmlmin',
     'grunt-usemin',
-    'grunt-targethtml'
+    'grunt-targethtml',
+    'grunt-uncss'
     ].forEach(function(task) { grunt.loadNpmTasks(task); });
 
 
@@ -46,6 +47,7 @@ module.exports = function(grunt) {
                     dest: 'dist/',
                     src: [
                     'images/*',
+                    'assets/js/analytics.js',
                     'assets/css/all-ie-only.css',
                     'assets/css/ie7.css',
                     'assets/css/ie8.css',
@@ -153,6 +155,28 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uncss: {
+            dist: {
+                files: {
+                    '.tmp/assets/css/style.pkg.css': [
+                        'src/about.html',
+                        'src/contact.html',
+                        'src/features.html',
+                        'src/index.html',
+                        'src/price.html'
+                    ]
+                }
+            }
+        },
+        cssmin: {
+            minify: {
+                expand: true,
+                cwd: '.tmp/assets/css',
+                src: ['style.pkg.css'],
+                dest: 'dist/assets/css',
+                ext: '.pkg.css'
+          }
+        },
         targethtml: {
             dist: {
                 files: {
@@ -195,9 +219,11 @@ grunt.registerTask('change', [
     'concat',
     'uglify',
     'imagemin',
-    'cssmin',
+    // 'cssmin',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'uncss',
+    'cssmin:minify'
     ]);
 
 grunt.registerTask('default', [
