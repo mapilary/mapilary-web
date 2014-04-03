@@ -15,6 +15,7 @@ module.exports = function(grunt) {
     'grunt-contrib-imagemin',
     'grunt-contrib-htmlmin',
     'grunt-usemin',
+    'grunt-rev',
     'grunt-targethtml',
     'grunt-uncss'
     ].forEach(function(task) { grunt.loadNpmTasks(task); });
@@ -33,9 +34,7 @@ module.exports = function(grunt) {
                     dot: true,
                     cwd: 'src/',
                     dest: '.tmp/',
-                    src: [
-                    '*.html',
-                    ],
+                    src: ['*.html'],
                     filter: 'isFile'
                 }]
             },
@@ -43,21 +42,27 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     dot: true,
+                    cwd: '.tmp/',
+                    dest: 'dist/',
+                    src: ['*.html'],
+                    filter: 'isFile'
+                }, {
+                    expand: true,
+                    dot: true,
                     cwd: 'src/',
                     dest: 'dist/',
                     src: [
-                    'images/*',
-                    'assets/js/analytics.js',
-                    'assets/css/all-ie-only.css',
-                    'assets/css/ie7.css',
-                    'assets/css/ie8.css',
-                    'assets/ico/**',
-                    'robots.txt',
-                    'sitemap.xml'
+                        'images/*',
+                        'assets/js/analytics.js',
+                        'assets/css/all-ie-only.css',
+                        'assets/css/ie7.css',
+                        'assets/css/ie8.css',
+                        'assets/ico/**',
+                        'robots.txt',
+                        'sitemap.xml'
                     ],
                     filter: 'isFile'
-                },
-                {
+                }, {
                     expand: true,
                     dot: true,
                     flatten: true,
@@ -65,8 +70,7 @@ module.exports = function(grunt) {
                     dest: 'dist/assets/css/images/',
                     src: ['**/images/*'],
                     filter: 'isFile'
-                },
-                {
+                }, {
                     expand: true,
                     dot: true,
                     flatten: true,
@@ -81,8 +85,8 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'src/css/main.min.css': [
-                    'src/less/style.less',
-                    'src/less/track.less'
+                        'src/less/style.less',
+                        'src/less/track.less'
                     ]
                 },
                 options: {
@@ -116,14 +120,15 @@ module.exports = function(grunt) {
             }
         },
         useminPrepare: {
-            html: ['.tmp/index.html', '.tmp/track.html'],
+            html: ['.tmp/*.html'],
             options: {
                 dest: 'dist/',
                 root: 'src'
             }
         },
         usemin: {
-            html: ['.tmp/index.html', '.tmp/track.html']
+            html: ['dist/*.html'],
+            css: ['dist/assets/css/**/*.css']
         },
         htmlmin: {
             dist: {
@@ -133,7 +138,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: '.tmp',
+                    cwd: 'dist',
                     src: '*.html',
                     dest: 'dist'
                 }]
@@ -155,19 +160,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        uncss: {
-            dist: {
-                files: {
-                    '.tmp/assets/css/style.pkg.css': [
-                        'src/about.html',
-                        'src/contact.html',
-                        'src/features.html',
-                        'src/index.html',
-                        'src/price.html'
-                    ]
-                }
-            }
-        },
         cssmin: {
             minify: {
                 expand: true,
@@ -176,6 +168,11 @@ module.exports = function(grunt) {
                 dest: 'dist/assets/css',
                 ext: '.pkg.css'
           }
+        },
+        rev: {
+            files: {
+              src: ['dist/assets/css/style.pkg.css', 'dist/assets/js/app.pkg.js']
+            }
         },
         targethtml: {
             dist: {
@@ -213,17 +210,17 @@ module.exports = function(grunt) {
 grunt.registerTask('test', ['jshint', 'qunit']);
 
 grunt.registerTask('change', [
-    'copy',
+    'copy:prepareUsemin',
     'targethtml',
     'useminPrepare',
     'concat',
     'uglify',
     'imagemin',
     'cssmin',
+    'rev',
+    'copy:dist',
     'usemin',
-    'htmlmin',
-    // 'uncss',
-    // 'cssmin:minify'
+    'htmlmin'
     ]);
 
 grunt.registerTask('default', [
@@ -232,6 +229,5 @@ grunt.registerTask('default', [
     'coffee',
     'jshint',
     'change'
-        // 'uglify',
-        ]);
+    ]);
 };
