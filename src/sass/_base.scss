@@ -1,0 +1,48 @@
+@import "compass/css3";
+@import "compass/typography";
+@import "compass/layout";
+
+$font-condensed: 'Open Sans Condensed';
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+a {
+    color: transparent;
+    text-decoration: none;
+}
+
+.cbp-af-header.cbp-af-header-shrink, .cbp-af-header-shrink .logo, .cbp-af-header-shrink nav ul, .cbp-af-header-shrink .form-control, .cbp-af-header-shrink .btn, .cbp-af-header, nav ul, .form-control, .btn, .logo.navbar-header h2, .cbp-af-header-shrink .navbar-header h2 {
+    @include transition(all 0.8s ease-in-out);
+}
+
+.plus {
+    padding-top: 25px;
+    display: block;
+    margin: 0 auto;
+}
+
+#map {
+    height: 360px;
+    margin-bottom: 5px;
+    display: none;
+}

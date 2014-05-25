@@ -1,0 +1,460 @@
+/* - - - - - - - - - - CONTENT - - - - - - - - - - */
+
+#content {
+    width: 100%;
+    height: auto;
+    float: left;
+    padding-top: 170px;
+}
+
+/*#content .container {
+    width: 100%;
+    position: absolute;
+}*/
+
+#content .precontainer {
+    width: 100%;
+    position: relative;
+    min-height: 729px;
+}
+
+.container-left {
+    width: 50%;
+    height:100%;
+    background: #eb6355;
+    position: absolute;
+    z-index: -1;
+}
+
+.container-right {
+    width: 50%;
+    height:100%;
+    background: #83796a;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.container-left2 {
+    width: 50%;
+    height:100%;
+    background: #ff9287;
+    position: absolute;
+    z-index: -1;
+}
+
+.container-right2 {
+    width: 50%;
+    height:100%;
+    background: #a59b8b;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.incontainer {
+    max-width: 1160px;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.incontainer h3, .contact h3, .panel-default > .panel-heading,  .mission h3, .vision h3, .values h3, .slider h2, .slider h3, .help h3, .incontainer h4 {
+    font-family: $font-condensed;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: -1px;
+    margin: 20px 0 0 0;
+}
+
+.incontainer h4 {
+    font-size: 30px;
+    text-transform: none;
+    padding: 10px 0 0 0;
+    position: relative;
+    text-align: left;
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    left: -2px;
+}
+
+.slider h2 {
+    color: #665f4e;
+    font-size: 80px;
+}
+
+.slider3 {
+    color: #eb6355 !important;
+    font-size: 80px !important;
+}
+
+.slider h3 {
+    color: #eb6355;
+    /*text-shadow: 1px 1px 1px #4f4f4f;*/
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.contact h3, .panel-default > .panel-heading {
+    color: #eb6355;
+    font-size: 26px;
+    margin-bottom: 5px;
+    margin-top: 45px;
+}
+
+.incontainer-left {
+    width: 50%;
+    display: block;
+    float: left;
+    background: #eb6355;
+}
+
+.incontainer-right {
+    width: 50%;
+    display: block;
+    float: left;
+    background: #83796a;
+}
+
+.incontainer-left2 {
+    width: 50%;
+    display: block;
+    float: left;
+    background: #ff9287;
+}
+
+.incontainer-right2 {
+    width: 50%;
+    display: block;
+    float: left;
+    background: #a59b8b;
+}
+
+.icon {
+    margin: 0 auto;
+    display: block;
+    margin-top: 45px;
+}
+
+.incontainer ul {
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+li, .incontainer p, .mission p, .vision p, .values p, .help p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.benefits, .story, .logos, .contact, .mission, .vision, .values, .help {
+    width: 100%;
+    position: relative;
+    background-color: #f6f5f2;
+    display: block;
+    float: left;
+}
+
+.partners {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.logos {
+    text-align: center;
+}
+
+.wayra {
+    margin: 144px auto;
+}
+
+.story, .logos {
+    background: #fff;
+}
+
+.partners, .mission {
+    background: #eb6355;
+}
+
+.story .container, .partners .container, .logos .container {
+    max-width: 1160px !important;
+    margin: 0 auto;
+    display: block;
+    position: relative !important;
+}
+
+#content .benefits .container {
+    max-width: 1160px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.benefits .incontainer-left {
+    width: 50%;
+    display: block;
+    float: left;
+    background-color: #f6f5f2;
+}
+
+.benefits .incontainer-right {
+    width: 50%;
+    display: block;
+    float: left;
+    background-color: #f6f5f2;
+}
+
+.benefits h2, .story h2, .partners h2, .contact h2, .title h2 {
+    font-family: $font-condensed;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+    padding:50px 50px 0 50px;
+    text-align: center;
+    color: #eb6355;
+    font-size: 74px;
+    text-transform: uppercase;
+}
+
+.title h2 {
+    font-size: 40px;
+    padding: 20px 0 20px 0;
+}
+
+.story h2 {
+    color: #83796a;
+    padding: 50px 5px 0 5px;
+}
+
+.partners h2 {
+    color: #fff;
+    padding: 50px 5px 0 5px;
+}
+
+.story p, .help p {
+    color: #827869;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+}
+
+.linka, .linka2 {
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 30px;
+}
+
+.linka2 {
+    padding-bottom: 50px;
+}
+
+.benefits .incontainer-left ul, .benefits .incontainer-right ul {
+    margin: 0 auto;
+    display: block;
+    width: 75%;
+    margin-bottom: 80px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.column1-3 ul, .story .column1-3 p {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.benefits .incontainer-left li, .benefits .incontainer-right li, .benefits .incontainer-right p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    color: #eb6355;
+    font-size: 20px;
+    margin-bottom: 50px;
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 70px;
+}
+
+.benefits a {
+    font-family: $font-condensed;
+    font-style: normal;
+    font-weight: 700;
+    color: #eb6355;
+    font-size: 18px;
+    margin-bottom: 50px;
+    float: right;
+    text-transform: uppercase;
+}
+
+.benefits a:hover {
+    color: #83796a;
+}
+
+.benefits .incontainer-right li, .benefits .incontainer-right p {
+    color: #83796a;
+}
+
+.benefits .incontainer-left h3, .benefits .incontainer-right h3, .story h3 {
+    font-family: $font-condensed;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    color: #eb6355;
+    letter-spacing: -1px;
+    margin: 20px;
+}
+
+.career {
+    text-transform: none !important;
+    padding-bottom: 20px;
+}
+
+.benefits .incontainer-right h3 {
+    color: #83796a;
+}
+
+.column1-3 {
+    float:left;
+    width:30%;
+    padding-bottom: 80px;
+}
+
+.column1-5 {
+    float:left;
+    width:5%;
+    padding-bottom: 80px;
+}
+
+.column1-3-career {
+    float:left;
+    width:33.33333%;
+}
+
+.column1-3 p, .contact2-3 p, .contact1-3 p, .story li {
+    color: #827869;
+    font-size: 18px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    line-height: 30px;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.story li, .story .column1-3 p  {
+    text-align: left;
+}
+
+.contact2-3 p, .contact1-3 p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.column1-4 {
+    float:left;
+    width:25%;
+    min-height: 300px;
+}
+
+.collapse {
+    display: none;
+}
+
+.navbar-header .collapse {
+    display: block;
+}
+
+.collapse.in {
+    display: block;
+}
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.35s ease;
+    transition: height 0.35s ease;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #f6f5f2;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+h4 {
+    margin: 0;
+}
+
+.panel-title {
+  color: #83796a;
+}
+
+.panel-group .panel {
+  margin-bottom: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 45px;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 5px;
+}
+
+.panel-group .panel-heading {
+    border-bottom: 0;
+}
+
+.panel-group .panel-footer {
+    border-top: 0;
+}
+
+.panel-default > .panel-heading {
+    color: #eb6355;
+    padding: 0;
+    margin: 0;
+}
+
+.clearer {width:100% !important;font-size:0 !important;line-height:0 !important;padding:0 !important;margin:0 !important;clear:both;}
+
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 15px 0 15px;
+    border-color: #eb6455 transparent transparent transparent;
+    line-height: 0px;
+    _border-color: #eb6455 #000000 #000000 #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    margin: 0 auto;
+}
+
+.contact1-3 {
+    float: left;
+    display: block;
+    width: 33.333333%;
+    padding-bottom: 50px;
+}
+
+.contact2-3 {
+    float: left;
+    display: block;
+    width: 66.666666%;
+}

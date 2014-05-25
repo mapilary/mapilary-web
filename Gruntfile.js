@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     'grunt-contrib-uglify',
     'grunt-contrib-cssmin',
     'grunt-contrib-concat',
-    'grunt-contrib-less',
+    'grunt-contrib-compass',
     'grunt-contrib-coffee',
     'grunt-contrib-imagemin',
     'grunt-contrib-htmlmin',
@@ -81,21 +81,16 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        less: {
+        compass: {
             dist: {
-                files: {
-                    'src/css/main.min.css': [
-                        'src/less/style.less',
-                        'src/less/track.less'
-                    ]
-                },
                 options: {
-                    compress: false,
-                    // LESS source maps
-                    // To enable, set sourceMap to true and update sourceMapRootpath based on your install
-                    sourceMap: true,
-                    sourceMapFilename: 'src/css/main.min.css.map',
-                    sourceMapRootpath: '/mapilary-web'
+                    httpPath: '',
+                    sourcemap: true,
+                    relativeAssets: true,
+                    // basePath: '<%= mapilary.app %>',
+                    sassDir: ['src/sass'],
+                    cssDir: ['src/css'],
+                    imagesDir: ['src/assets']
                 }
             }
         },
@@ -196,13 +191,9 @@ module.exports = function(grunt) {
                 files: ['src/**/*.coffee'],
                 tasks: ['coffee', 'jshint', 'change']
             },
-            less: {
-                files: ['src/**/*.less'],
-                tasks: ['less', 'change']
-            },
-            css: {
-                files: '**/*.sass',
-                tasks: ['sass', 'change']
+            sass: {
+                files: 'src/**/*.s[a|c]ss',
+                tasks: ['compass', 'change']
             }
         }
     });
@@ -225,7 +216,7 @@ grunt.registerTask('change', [
 
 grunt.registerTask('default', [
     'clean',
-    'less',
+    'compass',
     'coffee',
     'jshint',
     'change'

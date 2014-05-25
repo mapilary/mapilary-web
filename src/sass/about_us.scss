@@ -1,0 +1,50 @@
+@import "base";
+
+/* - - - - - - - - - - ABOUT US - - - - - - - - - - */
+
+.mission-left, .mission-right, .vision-left, .vision-right, .values-left, .values-right {
+    width: 50%;
+    display: block;
+    float: left;
+    background: #eb6355;
+    min-height: none;
+}
+
+.mission h3, .vision h3, .values h3 {
+    padding-top: 15%;
+    text-align: left;
+}
+
+.vision h3, .vision p {
+    color: #eb6355;
+}
+
+.values h3, .values p {
+    color: #454038;
+}
+
+.mission img, .vision img, .values img, .help img {
+    margin: 0 auto;
+    display: block;
+}
+
+.vision-left, .vision-right {
+    background: #f6f5f2;
+}
+
+.values-left, .values-right, .values, .help {
+    background: #989084;
+}
+
+.values-right {
+    float: right;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}

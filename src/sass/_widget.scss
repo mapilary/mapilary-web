@@ -1,0 +1,77 @@
+/* - - - - - - - - - - WIDGET - - - - - - - - - - */
+
+.bs-widget-frame {
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 30000;
+    padding: 20px;
+    margin: 0 auto;
+    @include box-shadow(0px 1px 8px rgba(0,0,0,0.3));
+}
+
+.form-inline-widget {
+    width: 100%;
+    -webkit-appearance: none;
+    display: block;
+    float: right;
+    z-index: -2;
+    margin-bottom: 20px;
+}
+
+.form-group-widget {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    width: 53%;
+}
+
+.form-control-widget {
+    padding: 18px 18px;
+    font-size: 26px;
+    width: 90%;
+    display: block;
+    background-color: #F0EEEA;
+    border: none;
+    margin: 0;
+    -webkit-appearance: none;
+    font-family: $font-condensed;
+    font-style: normal;
+    font-weight: normal;
+    -moz-box-sizing: border-box;
+}
+
+.btn-widget {
+    color: #fff;
+    background-color: #eb6355;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    font-family: $font-condensed;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    float: right;
+    padding: 18px 50px;
+    font-size: 26px;
+    margin-right: 0;
+}
+
+.btn-widget:hover, .btn-widget:active {
+    color: #eb6355;
+    background-color: #f6f5f2;
+    @include transition(all 0.2s ease-out);
+}
+
+.contact2-3 div.smalltext p {
+    font-size: small;
+}

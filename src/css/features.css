@@ -1,0 +1,146 @@
+/* line 7, ../sass/_base.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 14, ../sass/_base.scss */
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+/* line 19, ../sass/_base.scss */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 24, ../sass/_base.scss */
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* line 29, ../sass/_base.scss */
+a {
+  color: transparent;
+  text-decoration: none;
+}
+
+/* line 34, ../sass/_base.scss */
+.cbp-af-header.cbp-af-header-shrink, .cbp-af-header-shrink .logo, .cbp-af-header-shrink nav ul, .cbp-af-header-shrink .form-control, .cbp-af-header-shrink .btn, .cbp-af-header, nav ul, .form-control, .btn, .logo.navbar-header h2, .cbp-af-header-shrink .navbar-header h2 {
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+/* line 38, ../sass/_base.scss */
+.plus {
+  padding-top: 25px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 44, ../sass/_base.scss */
+#map {
+  height: 360px;
+  margin-bottom: 5px;
+  display: none;
+}
+
+/* - - - - - - - - - - FEATURES - - - - - - - - - - */
+/* line 5, ../sass/features.scss */
+.features {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  display: block;
+}
+
+/* line 12, ../sass/features.scss */
+.features h2 {
+  font-family: "Open Sans Condensed";
+  font-style: normal;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #eb6355;
+  font-size: 74px;
+  text-transform: uppercase;
+  line-height: 100px;
+}
+
+/* line 25, ../sass/features.scss */
+.features .container {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  float: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* line 33, ../sass/features.scss */
+.features .container-in {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* line 40, ../sass/features.scss */
+.features .container-left, .features .container-right {
+  width: 50%;
+  display: block;
+  float: left;
+  position: relative;
+  background: #fff;
+  z-index: 3;
+}
+
+/* line 49, ../sass/features.scss */
+.features .container h3 {
+  font-family: "Open Sans Condensed";
+  font-style: normal;
+  font-weight: 300;
+  margin: 0;
+  padding: 110px 20px 0 20px;
+  text-align: left;
+  color: #eb6355;
+  font-size: 50px;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+/* line 62, ../sass/features.scss */
+.features .container-left h3 {
+  padding: 60px 20px 0 20px;
+}
+
+/* line 66, ../sass/features.scss */
+.widget {
+  padding-top: 110px !important;
+}
+
+/* line 70, ../sass/features.scss */
+.features .container p {
+  color: #827869;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+  line-height: 30px;
+  padding: 0 20px 0 20px;
+}
+
+/* line 81, ../sass/features.scss */
+.features img {
+  display: block;
+}
+
+/*# sourceMappingURL=features.css.map */

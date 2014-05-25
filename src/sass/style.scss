@@ -1,0 +1,39 @@
+/*!
+ * Copyright 2013 Mapilary s.r.o.
+ *
+ * Author - Marian Kadlec - http://mariankadlec.com - marian.kadlec@icloud.com
+ *
+ */
+
+
+/*
+ * Table of contents:
+ *
+ * HEADER
+ * SLIDER
+ * CONTENT
+ * ICON
+ * FOOTER
+ * ABOUT US
+ * PRICE LIST
+ * FEATURES
+ * WIDGET
+ * xx
+ * xx
+ * xx
+ * xx
+ * xx
+ * xx
+ */
+
+@import "base";
+@import "header";
+@import "slider";
+@import "content";
+@import "icons";
+// @import "sprites";
+@import "footer";
+@import "about_us.scss";
+@import "pricelist.scss";
+@import "features.scss";
+@import "widget";
