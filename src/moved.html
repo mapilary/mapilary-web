@@ -138,21 +138,71 @@
                 padding: 0;
                 border: 0;
             }
+
+            .small {
+                font-size: 0.6rem;
+            }
+            .hidden {
+                display: none;
+            }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>Not found <span>:(</span></h1>
-            <p>Sorry, but the page you were trying to view does not exist.</p>
-            <p>It looks like this was the result of either:</p>
-            <ul>
-                <li>a mistyped address</li>
-                <li>an out-of-date link</li>
-            </ul>
+            <noscript>
+                <h1>Not found <span>:(</span></h1>
+                <p>Sorry, but the page you were trying to view does not exist.</p>
+                <p>It looks like this was the result of either:</p>
+                <ul>
+                    <li>a mistyped address</li>
+                    <li>an out-of-date link</li>
+                </ul>
+            </noscript>
+            <div id="notfound" class="hidden">
+                <h1>Not found <span>:(</span></h1>
+                <p>Sorry, but the page you were trying to view does not exist.</p>
+                <p>It looks like this was the result of either:</p>
+                <ul>
+                    <li>a mistyped address</li>
+                    <li>an out-of-date link</li>
+                </ul>
+            </div>
+            <div id="moved" class="hidden">
+                <h1>Page moved</h1>
+                <p>This page has been moved to new url.<br>
+                Please update your link:</p>
+                <p id="redirect"></p>
+                <p class="small">*You'll be redirected in 5 second.</p>
+            </div>
             <script>
-                var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
+                var el, redirect, foundMatch = false;
+                var routes = [
+                    {frag: 'integration-starter', url: 'http://beta.mapilary.com/docs/integration-starter/'},
+                    {frag: 'api-docs', url: 'http://beta.mapilary.com/docs/api/'}
+                ];
+                var ref = location.search.replace(/^.*?\=/, '');
+                for (var i = 0; i < routes.length; i++) {
+                    if (ref.indexOf(routes[i].frag) > -1) {
+                        foundMatch = true;
+                        redirect = routes[i].url;
+                        el = document.getElementById('redirect');
+                        el.innerHTML = '<a href="' + redirect + '">' + redirect + '</a>';
+                        break;
+                    }
+                }
+                if (!foundMatch) {
+                    el = document.getElementById('notfound');
+                    el.removeAttribute('class')
+                    var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;
+                    var script = document.createElement('script');
+                    script.src = 'http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js';
+                    document.write(script.outerHTML);
+                } else {
+                    el = document.getElementById('moved');
+                    setTimeout(function () {window.location.href = redirect;} , 3000);
+                }
+                el.removeAttribute('class')
             </script>
-            <script src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
             <script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -161,7 +211,6 @@
 
               ga('create', 'UA-47092864-1', 'mapilary.com');
               ga('send', 'pageview');
-
             </script>
         </div>
     </body>
