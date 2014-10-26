@@ -1,6 +1,6 @@
 {
   "name": "mapilary-web",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.8.0",

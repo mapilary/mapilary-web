@@ -41,14 +41,12 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    dot: true,
                     cwd: '.tmp/',
                     dest: 'dist/',
                     src: ['*.html'],
                     filter: 'isFile'
                 }, {
                     expand: true,
-                    dot: true,
                     cwd: 'src/',
                     dest: 'dist/',
                     src: [
@@ -64,7 +62,12 @@ module.exports = function(grunt) {
                     filter: 'isFile'
                 }, {
                     expand: true,
-                    dot: true,
+                    cwd: 'mapilary-widget/src',
+                    dest: 'dist/',
+                    src: ['images/*'],
+                    filter: 'isFile'
+                }, {
+                    expand: true,
                     flatten: true,
                     cwd: 'bower_components/leaflet-locatecontrol/',
                     dest: 'dist/assets/css/images/',
@@ -72,7 +75,6 @@ module.exports = function(grunt) {
                     filter: 'isFile'
                 }, {
                     expand: true,
-                    dot: true,
                     flatten: true,
                     cwd: 'bower_components/Leaflet.awesome-markers/',
                     dest: 'dist/assets/css/images/',
