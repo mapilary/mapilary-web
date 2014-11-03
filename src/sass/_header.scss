@@ -17,13 +17,9 @@ header {
     width: 100%;
     z-index: 10000;
     height: 170px;
-    -webkit-transition: height 0.3s;
-    -moz-transition: height 0.3s;
-    transition: height 0.3s;
     background: rgba(255,255,255,0.96);
-    box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
-    -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
-    -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+    @include transition(height 0.3s);
+    @include box-shadow(0px, 1px, 2px, rgba(0,0,0,0.1));
 }
 
 .cbp-af-header .cbp-af-inner {
@@ -40,9 +36,9 @@ header {
     margin-top: 19px;
     float: left;
     max-height: 129px;
-    -moz-transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
+    z-index: 2;
+    position: relative;
+    @include transition(all 0.8s ease-in-out);
 }
 
 h1 {
@@ -104,9 +100,7 @@ h1 {
     float: right;
     z-index: -2;
     max-height: 129px;
-    -moz-transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
+    @include transition(all 0.8s ease-in-out);
 }
 
 .form-group {
@@ -117,47 +111,47 @@ h1 {
 }
 
 .form-control {
-        display: block;
-        background-color: #F0EEEA;
-        border: none;
-        margin: 0;
-        padding: 22px 30px;
-        -webkit-appearance: none;
-        width: 300px;
-        font-family: $font-condensed;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 30px;
-        -moz-box-sizing: border-box;
+    display: block;
+    background-color: #F0EEEA;
+    border: none;
+    margin: 0;
+    padding: 22px 30px;
+    -webkit-appearance: none;
+    width: 300px;
+    font-family: $font-condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    -moz-box-sizing: border-box;
 }
 
 .cbp-af-header-shrink .form-control {
-        padding: 8px 17px;
+    padding: 8px 17px;
 }
 
 .btn {
-        color: #fff;
-        background-color: #eb6355;
-        display: inline-block;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
-        cursor: pointer;
-        border: none;
-        margin: 0;
-        padding: 22px 52px;
-        font-family: $font-condensed;
-        font-style: normal;
-        font-weight: normal;
-        text-transform: uppercase;
-        font-size: 30px;
-        box-sizing: border-box;
-        float: right;
-        -webkit-font-smoothing: auto;
+    color: #fff;
+    background-color: #eb6355;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 22px 52px;
+    font-family: $font-condensed;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 30px;
+    box-sizing: border-box;
+    float: right;
+    -webkit-font-smoothing: auto;
 }
 
 .cbp-af-header-shrink .btn {
-        padding: 8px 52px;
+    padding: 8px 52px;
 }
 
 .btn:hover, .btn:active {
@@ -168,32 +162,33 @@ h1 {
 
 nav {
     width: 100%;
-}
 
-nav ul {
-    list-style: none;
-    display: inline-block;
-    padding: 0;
-    margin: 118px 0 0 0;
-    position: absolute;
-    left: 114px;
-}
+    ul {
+        z-index: 3;
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 118px 0 0 0;
+        position: absolute;
+        left: 114px;
+    }
 
-nav ul li {
-    margin-left: 20px;
-    font-family: $font-condensed;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 18px;
-    letter-spacing: -1px;
-}
+    ul li {
+        margin-left: 20px;
+        font-family: $font-condensed;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: -1px;
+    }
 
-nav ul li a {
-    color: #827869;
-    text-decoration: none;
-}
+    ul li a {
+        color: #827869;
+        text-decoration: none;
+    }
 
-nav ul li a:hover, nav .active {
-    color: #eb6355;
+    ul li a:hover, nav .active {
+        color: #eb6355;
+    }
 }

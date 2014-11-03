@@ -32,10 +32,8 @@
   <!-- CSS files -->
   <!--(if target dev)>
   <!-->
-  <link href="../bower_components/leaflet-locatecontrol/src/L.Control.Locate.css" rel="stylesheet">
-  <link href="../bower_components/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css" rel="stylesheet">
-  <link href="assets/css/tipsy.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="assets/css/tipsy.css" rel="stylesheet">
   <link href="assets/css/responsive.css" rel="stylesheet">
   <!--<!(endif)-->
 
@@ -60,14 +58,6 @@
 
   <header>
     <div class="container">
-      <div class="bs-widget-frame collapse">
-        <form class="form-inline-widget" role="form">
-          <div class="form-group-widget">
-            <input type="text" class="form-control-widget" placeholder="Tracking Nr."></div>
-          <button type="submit" class="btn-widget btn-default">Track</button>
-        </form>
-        <div id="googleMap" style="width:100%;height:400px;"></div>
-      </div>
       <div class="cbp-af-header">
         <div class="cbp-af-inner">
           <nav class="navbar navbar-default" role="navigation">
@@ -112,7 +102,7 @@
     <!-- /.container --> </header>
 
   <div id="content">
-    <div id="map"></div>
+    <div id="widget"></div>
     <div class="title">
       <h2>
         Real-time tracking and online visualization of people and goods on map
@@ -171,20 +161,16 @@
     </div>
     <!-- /.container --> </footer>
 
-  <!-- CSS files -->
-  <link href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-  <!-- Latest version of jQuery from Google CDN -->
+  <!-- JS Files from CDN -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="https://ws.mapilary.com/socket.io/socket.io.js"></script>
+
   <!--(if target dev)>
   <!-->
-  <script src="../mapilary-widget/dist/js/main.js"></script>
   <script src="assets/js/jquery.tipsy.js"></script>
   <script src="assets/js/classie.js"></script>
   <script src="assets/js/cbpAnimatedHeader.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="../mapilary-widget/dist/js/widget-loader.min.js"></script>
+  <script src="assets/js/tracking.js"></script>
   <!--<!(endif)-->
   <!--(if target dist)>
   <script src="assets/js/app.pkg.js"></script>

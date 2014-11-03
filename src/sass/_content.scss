@@ -1,4 +1,68 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+a {
+    color: transparent;
+    text-decoration: none;
+}
+
+.cbp-af-header.cbp-af-header-shrink, .cbp-af-header-shrink .logo, .cbp-af-header-shrink nav ul, .cbp-af-header-shrink .form-control, .cbp-af-header-shrink .btn, .cbp-af-header, nav ul, .form-control, .btn, .logo.navbar-header h2, .cbp-af-header-shrink .navbar-header h2 {
+    @include transition(all 0.8s ease-in-out);
+}
+
+.plus {
+    padding-top: 25px;
+    display: block;
+    margin: 0 auto;
+}
+
 /* - - - - - - - - - - CONTENT - - - - - - - - - - */
+
+#widget {
+    height: 360px;
+    display: none;
+    background-color: #E7E7E7;
+    .preload {
+        height: 100%;
+        width: 100%;
+        font-size: 26px;
+        color: rgb(130, 120, 105);
+        text-align: center;
+        @include box-sizing(border-box);
+        position: relative;
+        font-family: $font-condensed;
+    }
+    .loading {
+        position: relative;
+        top: 40%;
+        line-height: 40px;
+    }
+    .notice {
+        position: absolute;
+        bottom: 30%;
+        width: 100%;
+        font-size: 18px;
+    }
+}
 
 #content {
     width: 100%;
@@ -386,8 +450,7 @@ li, .incontainer p, .mission p, .vision p, .values p, .help p {
     position: relative;
     height: 0;
     overflow: hidden;
-    -webkit-transition: height 0.35s ease;
-    transition: height 0.35s ease;
+    @include transition(height 0.35s ease);
 }
 
 .panel {
@@ -404,18 +467,18 @@ h4 {
 }
 
 .panel-title {
-  color: #83796a;
+    color: #83796a;
 }
 
 .panel-group .panel {
-  margin-bottom: 0;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-top: 45px;
+    margin-bottom: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 45px;
 }
 
 .panel-group .panel + .panel {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 .panel-group .panel-heading {

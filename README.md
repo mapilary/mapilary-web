@@ -21,6 +21,14 @@ Web is using [Mapilary Widget](https://github.com/mapilary/mapilary-widget), whi
 
     git submodule update
 
+    cd mapilary-widget
+
+    npm install
+
+    bower install
+
+    grunt
+
 Follow documentation on github, how to build widget project.
 
 ### Usage

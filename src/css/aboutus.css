@@ -1,0 +1,60 @@
+/* - - - - - - - - - - ABOUT US - - - - - - - - - - */
+/* line 5, ../sass/aboutus.scss */
+.mission-left, .mission-right, .vision-left, .vision-right, .values-left, .values-right {
+  width: 50%;
+  display: block;
+  float: left;
+  background: #eb6355;
+  min-height: none;
+}
+
+/* line 13, ../sass/aboutus.scss */
+.mission h3, .vision h3, .values h3 {
+  padding-top: 15%;
+  text-align: left;
+}
+
+/* line 18, ../sass/aboutus.scss */
+.vision h3, .vision p {
+  color: #eb6355;
+}
+
+/* line 22, ../sass/aboutus.scss */
+.values h3, .values p {
+  color: #454038;
+}
+
+/* line 26, ../sass/aboutus.scss */
+.mission img, .vision img, .values img, .help img {
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 31, ../sass/aboutus.scss */
+.vision-left, .vision-right {
+  background: #f6f5f2;
+}
+
+/* line 35, ../sass/aboutus.scss */
+.values-left, .values-right, .values, .help {
+  background: #989084;
+}
+
+/* line 39, ../sass/aboutus.scss */
+.values-right {
+  float: right;
+}
+
+/* line 43, ../sass/aboutus.scss */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+/* line 48, ../sass/aboutus.scss */
+.cf:after {
+  clear: both;
+}
+
+/*# sourceMappingURL=aboutus.css.map */

@@ -6,57 +6,57 @@ footer {
     position: relative;
     display: block;
     float: left;
-}
 
-footer .container {
-    max-width: 1160px;
-    width: 100%;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-}
+    .container {
+        max-width: 1160px;
+        width: 100%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
 
-footer h2 {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 50px;
-    text-align: center;
-    color: #fff;
-}
+    h2 {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 50px;
+        text-align: center;
+        color: #fff;
+    }
 
-footer .form-horizontal {
-    display: block;
-    max-width: 530px;
-    margin: 0 auto;
-}
+    .form-horizontal {
+        display: block;
+        max-width: 530px;
+        margin: 0 auto;
+    }
 
-footer .form-control {
-    display: block;
-    padding: 12px 14px;
-    font-size: 20px;
-    background-color: #f6f5f2;
-    border: none;
-    margin: 0 0 30px 0;
-    width: 100%;
-    box-sizing: border-box;
-}
+    .form-control {
+        display: block;
+        padding: 12px 14px;
+        font-size: 20px;
+        background-color: #f6f5f2;
+        border: none;
+        margin: 0 0 30px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-footer .btn {
-    font-size: 26px;
-    font-weight: 600;
-    display: block;
-    border-bottom: 3px solid #ca4233;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    float: none;
-    min-width: 40%;
-}
+    .btn {
+        font-size: 26px;
+        font-weight: 600;
+        display: block;
+        border-bottom: 3px solid #ca4233;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        float: none;
+        min-width: 40%;
+    }
 
-footer .btn:hover, .btn:active {
-    color: #eb6355;
-    background-color: #f6f5f2;
-    border-bottom: 3px solid #ebebeb;
+    .btn:hover, .btn:active {
+        color: #eb6355;
+        background-color: #f6f5f2;
+        border-bottom: 3px solid #ebebeb;
+    }
 }
 
 .social {
