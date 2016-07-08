@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Page Not Found :(</title>
+        <title>Page moved</title>
         <style>
             ::-moz-selection {
                 background: #b3d4fc;
@@ -154,8 +154,8 @@
                 <p>but we cannot redirect you to new resource url, because your javascript is disabled.</p>
                 <p>Please click on requested resource link.</p>
                 <ul>
-                    <li><a href="http://mapilary.com/docs/integration-starter/">http://mapilary.com/docs/integration-starter/</a></li>
-                    <li><a href="http://mapilary.com/docs/api/">http://mapilary.com/docs/api/</a></li>
+                    <li><a href="https://mapilary.com/docs/integration-starter/">https://mapilary.com/docs/integration-starter/</a></li>
+                    <li><a href="https://api.mapilary.com/explore/">https://api.mapilary.com/explore/</a></li>
                 </ul>
             </noscript>
             <div id="notfound" class="hidden">
@@ -178,7 +178,8 @@
                 var el, redirect, foundMatch = false;
                 var routes = [
                     {frag: 'integration-starter', url: 'http://mapilary.com/docs/integration-starter/'},
-                    {frag: 'api-docs', url: 'http://mapilary.com/docs/api/'}
+                    {frag: 'docs/api', url: 'https://api.mapilary.com/explore/'},
+                    {frag: 'api-docs', url: 'https://api.mapilary.com/explore/'}
                 ];
                 var ref = location.search.replace(/^.*?\=/, '');
                 for (var i = 0; i < routes.length; i++) {
