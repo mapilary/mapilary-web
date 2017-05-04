@@ -14,14 +14,12 @@ module.exports = function(grunt) {
     'grunt-contrib-htmlmin',
     'grunt-usemin',
     'grunt-rev',
-    'grunt-aws',
     'grunt-targethtml'
     ].forEach(function(task) { grunt.loadNpmTasks(task); });
 
 
     // setup init config
     grunt.initConfig({
-        aws: grunt.file.readJSON('credentials.json'),
         pkg: grunt.file.readJSON('package.json'),
         clean: {
             dist: ['.tmp', 'dist'],
@@ -165,29 +163,6 @@ module.exports = function(grunt) {
             sass: {
                 files: 'src/**/*.s[a|c]ss',
                 tasks: ['compass:dev', 'build']
-            }
-        },
-        s3: {
-            options: {
-                accessKeyId: '<%= aws.accessKeyId %>',
-                secretAccessKey: '<%= aws.secretAccessKey %>',
-                bucket: 'www.mapilary.com',
-                region: 'eu-west-1',
-                gzip: false,
-                cache: false
-            },
-            html: {
-                cwd: 'dist',
-                src: ['**', '!**/*.{css,js,jpg,png,jpeg,gif}']
-            },
-            assets: {
-                options: {
-                    headers: {
-                        CacheControl: 'public,max-age=31536000'
-                    }
-                },
-                cwd: 'dist',
-                src: '**/*.{css,js,jpg,png,jpeg,gif}'
             }
         }
     });
