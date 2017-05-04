@@ -12,9 +12,7 @@ Run build in docker container:
     docker run --rm -v $(pwd):/src -t mapilary/web
 
 Website will be cloned and generated into `dist` directory of current folder ➔ $(pwd).
-You can also run above command to rebuild website on updates.
-
-**Warning**: All content of `dist` folder will be removed as part of docker run build.
+You can also run above command to rebuild website on git updates.
 
 ## Build in local environment
 
