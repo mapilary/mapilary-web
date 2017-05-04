@@ -80,7 +80,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 options: {
-                    httpPath: '',
+                    httpPath: '/',
                     sourcemap: false,
                     relativeAssets: true,
                     assetCacheBuster: false,
