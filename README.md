@@ -5,7 +5,7 @@ Mapilary Company Website
 
 Build docker image:
 
-    docker build -t "mapilary/web" .
+    docker build -t "mapilary/web" https://raw.githubusercontent.com/mapilary/mapilary-web/master/Dockerfile
 
 Run build in docker container:
 
