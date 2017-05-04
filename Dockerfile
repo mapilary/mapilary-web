@@ -25,4 +25,4 @@ RUN git clone --recursive $REPO $BUILD_DIR && \
 CMD cd ${BUILD_DIR} && git pull && git submodule -q foreach git pull -q origin master && \
     cd mapilary-widget && npm install && bower --allow-root install && grunt && \
     cd .. && npm install && grunt && \
-    rm -rf /dist/* && cp -a dist/* /dist && chmod -R 644 /dist/*
+    rm -rf /dist/* && cp -r dist/* /dist
