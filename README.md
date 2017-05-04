@@ -1,42 +1,47 @@
 Mapilary Company Website
 ========================================
 
-### How to build
+## Build using Docker
 
-Install [nodejs and npm](http://nodejs.org/download/) (they come together), then [install grunt-cli](http://gruntjs.com/getting-started).
+Build docker image:
 
-Then just run `npm install` in the root directory of this project.
+    docker build -t "mapilary/web" .
 
-### Client side scripts
+Run build in docker container:
 
-Install [bower](http://bower.io/#installing-bower).
+    mkdir -p dist
+    docker run --rm -v $(pwd)/dist:/dist -t mapilary/web
 
-Then run `bower install` in the root directory of this project.
+Website will be generated into `dist` directory of current folder ➔ $(pwd).
+You can also run above command to rebuild website on updates.
 
-### Mapilary Widget submodule
+**Warning**: All content of `dist` folder will be removed as part of docker run build.
 
-Web is using [Mapilary Widget](https://github.com/mapilary/mapilary-widget), which has to be build first:
+## Build in local environment
 
-    git submodule init
+* Install [bower](http://bower.io/#installing-bower).
+* Install [nodejs and npm](http://nodejs.org/download/) (they come together).
+* Install [grunt-cli](http://gruntjs.com/getting-started).
+* Install [compass](http://compass-style.org/install/)
 
-    git submodule update
+Web has [Mapilary Widget](https://github.com/mapilary/mapilary-widget) dependency, which has to be build first:
 
-    cd mapilary-widget
+    git submodule init && \
+    git submodule update && \
+    cd mapilary-widget && \
+    npm install && bower install && \
+    grunt && \
+    cd ..
 
-    npm install
+Finally web site can be generated:
 
-    bower install
-
+    npm install && \
     grunt
 
-Follow documentation on github, how to build widget project.
+Website will be generated into `dist` directory.
 
-### Usage
+## Development
 
 Auto-compile `.less` and `.coffee` files from the `src/less/` and `src/coffee` folders (and place the results in `src/css/` and `src/js/`).
 
     grunt watch
-
-Build the project, compile `.less` and `.coffee` files, run jshint, and combine any static assets that are specified in `build` HTML comments (see examples in src/index.html).
-
-    grunt
