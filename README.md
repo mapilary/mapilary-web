@@ -5,14 +5,13 @@ Mapilary Company Website
 
 Build docker image:
 
-    docker build -t "mapilary/web" https://raw.githubusercontent.com/mapilary/mapilary-web/master/Dockerfile
+    docker build -t "mapilary/web" https://raw.githubusercontent.com/mapilary/mapilary-web/master/build/Dockerfile
 
 Run build in docker container:
 
-    mkdir -p dist
-    docker run --rm -v $(pwd)/dist:/dist -t mapilary/web
+    docker run --rm -v $(pwd):/src -t mapilary/web
 
-Website will be generated into `dist` directory of current folder ➔ $(pwd).
+Website will be cloned and generated into `dist` directory of current folder ➔ $(pwd).
 You can also run above command to rebuild website on updates.
 
 **Warning**: All content of `dist` folder will be removed as part of docker run build.
@@ -45,3 +44,10 @@ Website will be generated into `dist` directory.
 Auto-compile `.less` and `.coffee` files from the `src/less/` and `src/coffee` folders (and place the results in `src/css/` and `src/js/`).
 
     grunt watch
+
+Or in docker dev container:
+
+    docker build -t "mapilary/web-dev" .
+    docker run -v $(pwd):/src -t mapilary/web-dev
+
+Note: Above commands has to be run in same directory in which mapilary/web image was created.
